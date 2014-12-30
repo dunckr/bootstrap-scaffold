@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'contents/',
-                    src: ['**/*.js', '**/*.css', '**/*.png', '**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.otf'],
+                    src: ['**/*.js', '**/*.css', '**/*.png'],
                     dest: 'public/'
                 }, ]
             },
@@ -65,6 +65,12 @@ module.exports = function(grunt) {
                     dest: 'public/'
                 }, ]
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'public'
+            },
+            src: ['**']
         },
         clean: ['public']
     });
