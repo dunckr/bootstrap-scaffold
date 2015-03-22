@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['contents/*.html', 'contents/scss/*.scss', 'templates/**/*.hbs'],
+                files: ['contents/**', 'templates/**'],
                 tasks: ['sass', 'assemble', 'copy'],
             },
         },
